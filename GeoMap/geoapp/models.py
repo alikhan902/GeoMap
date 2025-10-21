@@ -12,3 +12,4 @@ class Place(models.Model):
 class PlaceImage(models.Model):
     place = models.ForeignKey(Place, related_name='images', on_delete=models.CASCADE)
     image = models.ImageField(upload_to='places/')
+    
