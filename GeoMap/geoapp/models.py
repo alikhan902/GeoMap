@@ -1,10 +1,11 @@
 from django.db import models
+from ckeditor.fields import RichTextField
 
 
 class Place(models.Model):
     title = models.CharField(max_length=255)
     description_short = models.TextField(blank=True)
-    description_long = models.TextField(blank=True)
+    description_long = RichTextField(blank=True)
     latitude = models.FloatField()
     longitude = models.FloatField()
     main_image = models.ImageField(blank=True, upload_to='places/')
